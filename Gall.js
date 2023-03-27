@@ -1,19 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 export default function 
 Gall({data}) {
   return (
-    <div>
-    <div >
+    
+    < >
         {data.map((image) =>
-        <div key={image.id}>
-        <div >
+        <div id="image" style={{display:'block',float:'left',marginLeft:"10px"}}>
         <img  style={{margin:'4px', padding:"4px",borderRadius:"8px" }}src={`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}_m.jpg`} 
-       height="300" width="300" alt={image.title}/>
+       height="180" width="180" alt={image.title}/>
         </div>
-        </div>)}
-        </div>
-        </div>
+        )}
+    </>
+        
         
   )
 }
